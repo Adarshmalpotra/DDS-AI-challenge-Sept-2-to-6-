@@ -9,7 +9,7 @@ https://akmzoho.app.n8n.cloud/workflow/jKOCMXFHnfA3MjXr
  Repository Structure
 
 Code
-DDS-AI-challenge-Sept-2-to-6-/
+MortgageAI-DDS-AI-challenge-Sept-5-to-13/
 │
 ├── docs/
 │   └── progress/
