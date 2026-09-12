@@ -5,7 +5,8 @@ MortgageAI is a no code/low code underwriting engine built using n8n, Anthropic 
 
 Live Demo (n8n Workflow)
 https://akmzoho.app.n8n.cloud/workflow/jKOCMXFHnfA3MjXr
-
+Website link : https://mortgagedash-ai.lovable.app/about
+( Note : I created website https://www.mortgageai.co.in WIX.com) captioned MortgageAI — Automated Mortgage Underwriting Built for the DDS AI Challenge 2026. This site is getting linked to its design utility 'aria' which is not allowing to edit it properly. The results tested are not consistent). So lovable platform was selected and site prepared accordingly. I am trying to extend domain name https://www.mortgage.co.in to the site created at lovable, but it is taking time. these issues shall be addressed when response/ approval is received as external domain for lovable)  
  Repository Structure
 
 Code
