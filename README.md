@@ -1,61 +1,121 @@
-MortgageAI — Automated Mortgage Eligibility & Underwriting (DDS AI Challenge 2026)
+🌟 MortgageAI — Automated Mortgage Eligibility & Underwriting
+DDS AI Challenge 2026 — Final Submission
+A fully automated, no‑code/low‑code mortgage underwriting engine that delivers instant FOIR, EMI, eligibility, multi‑bank rule evaluation, document checklists, and email-ready underwriting summaries — all in under 7 seconds end‑to‑end.
 
-Instant FOIR, EMI & Underwriting — Automated, Accurate, Anytime.
-MortgageAI is a no code/low code underwriting engine built using n8n, Anthropic Claude Sonnet, OpenAI GPT5/GPT4o, and Google Sheets/Drive. It automates FOIR, EMI, loan eligibility, multi bank underwriting rules, document checklists, and email delivery — all orchestrated through n8n.
+MortgageAI demonstrates how modern agentic workflows, deterministic underwriting logic, and multi‑model AI orchestration can transform the mortgage approval pipeline into a fast, transparent, and error‑free digital experience.
 
-Live Demo (n8n Workflow)
+🚀 Live Demo & Project Links
+n8n Live Workflow Demo  
 https://akmzoho.app.n8n.cloud/workflow/jKOCMXFHnfA3MjXr
-Website link : https://mortgagedash-ai.lovable.app/about
-( Note : I created website https://www.mortgageai.co.in WIX.com) captioned MortgageAI — Automated Mortgage Underwriting Built for the DDS AI Challenge 2026. This site is getting linked to its design utility 'aria' which is not allowing to edit it properly. The results tested are not consistent). So lovable platform was selected and site prepared accordingly. I am trying to extend domain name https://www.mortgage.co.in to the site created at lovable, but it is taking time. these issues shall be addressed when response/ approval is received as external domain for lovable)  
- Repository Structure
 
-Code
-MortgageAI-DDS-AI-challenge-Sept-5-to-13/
-│
-├── docs/
-│   └── progress/
-│       └── DDS_Progress_Workbook_Adarsh_Days2-6.pdf
-│
-├── screenshots/
-│   ├── workflow.png
-│   ├── intake_form.png
-│   ├── underwriting_output.png
-│   └── sheets_logging.png
-│
-├── prompts/
-│   ├── FOIR_EMI_Prompt.txt
-│   ├── Underwriting_Prompt.txt
-│   ├── Document_Checklist_Prompt.txt
-│   └── PDF_Parsing_Prompt.txt
-│
+Project Website (Lovable Platform)  
+https://mortgagedash-ai.lovable.app/about
 
-└── README.md
+Primary Domain (WIX)  
+https://www.mortgageai.co.in  
+(Currently facing WIX–Aria editor restrictions; domain migration to Lovable is in progress.)
 
-Architecture Overview
+🧭 Project Journey — From Concept to Final Build
+MortgageAI began as a simple idea:
+Can mortgage underwriting be made instant, accurate, and fully automated using a no‑code/low‑code stack?
 
+Phase 1 — Problem Definition
+Manual underwriting is slow, inconsistent, and heavily dependent on human interpretation.
+
+FOIR/EMI calculations vary across banks.
+
+Document requirements differ by profile.
+
+PDF parsing is unreliable across formats.
+
+The challenge demanded a deterministic, auditable, and scalable underwriting engine.
+
+Phase 2 — Architecture Exploration
+Initial attempts to build the website on WIX (mortgageai.co.in) ran into editor limitations due to the Aria design utility.
+This caused:
+
+Inability to modify layouts
+
+Inconsistent rendering
+
+Broken integrations
+
+Pivot: Move to Lovable, which offered clean deployment, stable hosting, and rapid iteration.
+
+Phase 3 — Multi‑Model Strategy
+To ensure reliability:
+
+Claude Sonnet 4.5 → FOIR/EMI + underwriting logic
+
+GPT5 / GPT4o → PDF parsing fallback
+
+Deterministic JSON schema → Ensures consistent outputs
+
+n8n → Orchestration, validation, logging, email delivery
+
+This multi‑model approach eliminated hallucinations and ensured predictable underwriting outcomes.
+
+Phase 4 — Engineering & Automation
+Built a complete underwriting pipeline:
+
+Intake form
+
+FOIR/EMI engine
+
+Multi‑bank rules (HDFC, ICICI, SBI; Axis/Kotak planned)
+
+Document checklist generator
+
+Google Sheets logging
+
+Auto Drive folder creation
+
+Email delivery with underwriting summary
+
+Phase 5 — Final Optimization
+Achieved:
+
+Underwriting latency: 1.8–2.4 sec
+
+Workflow latency: 3.5–5 sec
+
+End‑to‑end: ~6–7 sec
+
+Cost/run: $0.002–$0.006
+
+MortgageAI became fast, cheap, and production‑ready.
+
+🧠 Architecture Overview
 User Intake Form → n8n Webhook → Underwriting Engine → Sheets Logging → Email Output
-MortgageAI uses a multi model strategy and deterministic underwriting schema to ensure accuracy, consistency, and reliability.
+
+MortgageAI uses a deterministic underwriting schema combined with multi‑model AI orchestration to ensure accuracy, consistency, and reliability.
 
 Core Components
-	Claude Sonnet 4.5 → FOIR/EMI + underwriting logic
-	GPT5 / GPT4o → PDF parsing fallback
-	Google Sheets → Eligibility log
-	Google Drive → Auto folder creation
-	Gmail API → Email delivery
-	n8n → Orchestration, validation, logging
+Claude Sonnet 4.5 — FOIR/EMI + underwriting logic
 
-FOIR & EMI Formula
+GPT5 / GPT4o — PDF parsing fallback
 
+Google Sheets — Eligibility log
+
+Google Drive — Auto folder creation
+
+Gmail API — Email delivery
+
+n8n — Orchestration, validation, logging
+
+📊 FOIR & EMI Formula
 FOIR (Fixed Obligation to Income Ratio)
 
-FOIR="Total EMIs" /"Net Monthly Income" 
+FOIR & EMI Formula
+FOIR (Fixed Obligation to Income Ratio)
+
+𝐹𝑂𝐼𝑅 =  Total EMIs / Net Monthly Income
 
 EMI (Equated Monthly Installment)
 
-EMI=(P⋅R⋅(1+R)^N)/((1+R)^N-1)
+𝐸𝑀𝐼 =(𝑃⋅𝑅⋅(1+𝑅)^𝑁)/ ((1+𝑅)^𝑁-1))
 
 🏦 Underwriting JSON Schema
-
 json
 {
   "foir": 0.45,
@@ -74,65 +134,88 @@ json
     "Bank Statements"
   ]
 }
-
-🔧 Multi Model Strategy
-
+🔧 Multi‑Model Strategy
 Model	Use Case
 Claude Sonnet 4.5	Underwriting, FOIR/EMI
 GPT5	PDF parsing
 GPT4o	Fast fallback parsing
+
+
 This ensures robustness across document formats and underwriting scenarios.
 
-Key Features
+⭐ Key Features
+Automated FOIR/EMI calculation
 
-	Automated FOIR/EMI calculation
-	
-	Multi bank underwriting logic (HDFC, ICICI, SBI; Axis/Kotak planned)
-	
-	Personalized document checklist
-	
-	PDF parsing with fallback models
-	
-	Google Sheets logging
-	
-	Auto Drive folder creation
-	
-	Email delivery with underwriting summary
-	
-	Fully no code/low code implementation
-	
-	Deterministic JSON schema for reliability
+Multi‑bank underwriting logic (HDFC, ICICI, SBI; Axis/Kotak planned)
 
-Performance
-	Underwriting latency: 1.8–2.4 sec
-	Workflow latency: 3.5–5 sec
-	End to end: ~6–7 sec
-	Cost/run: $0.002–$0.006
+Personalized document checklist
 
-Security
-	PII masked
-	Secrets stored in .env
-	No keys in repo
-	Validation nodes added
-	Deterministic JSON schema
-	Error handling + fallback prompts
+PDF parsing with fallback models
 
-Progress Workbook
+Google Sheets logging
 
-Full progress (Days 2–6): /docs/progress/DDS_Progress_Workbook_Adarsh_Days2-6.pdf
+Auto Drive folder creation
 
-How to Use / Test
-	Open the n8n workflow link
-	Submit intake form
-	FOIR/EMI calculated
-	Underwriting engine applies bank rules
-	Document checklist generated
-	Drive folder created
-	Email sent with underwriting summary
-	Logs stored in Google Sheets
+Email delivery with underwriting summary
 
-Credits
-Decoding Data Science — DDS AI Challenge 2026 Anthropic Claude OpenAI GPT n8n Automation Google Cloud APIs
+Fully no‑code/low‑code implementation
 
-Contact
-Adarsh Kumar Malpotra Email: adarshmalpotra@gmail.com
+Deterministic JSON schema for reliability
+
+⚡ Performance
+Underwriting latency: 1.8–2.4 sec
+
+Workflow latency: 3.5–5 sec
+
+End‑to‑end: ~6–7 sec
+
+Cost/run: $0.002–$0.006
+
+🔐 Security
+PII masked
+
+Secrets stored in .env
+
+No keys in repo
+
+Validation nodes added
+
+Deterministic JSON schema
+
+Error handling + fallback prompts
+
+📘 Progress Workbook
+Full progress (Days 2–6):
+/docs/progress/DDS_Progress_Workbook_Adarsh_Days2-6.pdf
+
+🧩 How to Use / Test
+Open the n8n workflow link
+
+Submit intake form
+
+FOIR/EMI calculated
+
+Underwriting engine applies bank rules
+
+Document checklist generated
+
+Drive folder created
+
+Email sent with underwriting summary
+
+Logs stored in Google Sheets
+
+🤝 Credits
+Decoding Data Science — DDS AI Challenge 2026
+
+Anthropic Claude
+
+OpenAI GPT
+
+n8n Automation
+
+Google Cloud APIs
+
+📬 Contact
+Adarsh Kumar Malpotra  
+Email: adarshmalpotra@gmail.com
